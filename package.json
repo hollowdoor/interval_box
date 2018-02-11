@@ -1,0 +1,35 @@
+{
+  "scripts": {
+    "build": "ebam",
+    "pretest": "npm run build",
+    "test": "node test/code.js"
+  },
+  "name": "interval-box",
+  "description": "A stable interval timer",
+  "keywords": [
+    "time,timer,interval",
+    "time",
+    "timer",
+    "interval"
+  ],
+  "version": "1.0.0",
+  "license": "MIT",
+  "ebam": {
+    "entry": "src/index.js",
+    "transforms": {
+      "dangerousForOf": false,
+      "dangerousTaggedTemplateString": false
+    },
+    "test": {
+      "dest": "test/code.js",
+      "src": "test/src.js"
+    }
+  },
+  "author": "Quentin Engles <hollowdoor99@gmail.com> (https://hollowdoor.github.io)",
+  "main": "dist/bundle.js",
+  "jsnext:main": "dist/bundle.es.js",
+  "module": "dist/bundle.es.js",
+  "dependencies": {
+    "raw-object": "^1.0.0"
+  }
+}
