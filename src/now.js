@@ -4,6 +4,8 @@ const start = typeof performance !== 'undefined' && performance.now
 
 const now = typeof performance !== 'undefined' && performance.now
 ? ()=>start + performance.now()
-: Date.now;
+: Date.now
+? Date.now
+: ()=>new Date().getTime();
 
 export default now;

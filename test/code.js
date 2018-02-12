@@ -143,7 +143,9 @@ var start = typeof performance !== 'undefined' && performance.now
 
 var now = typeof performance !== 'undefined' && performance.now
 ? function (){ return start + performance.now(); }
-: Date.now;
+: Date.now
+? Date.now
+: function (){ return new Date().getTime(); };
 
 var max = Math.max;
 
