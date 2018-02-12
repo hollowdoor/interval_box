@@ -3,8 +3,8 @@ import rawObject from 'raw-object';
 var requestFrame = typeof window !== 'undefined'
 ? window.requestAnimationFrame
 ? window.requestAnimationFrame
-: window.requestAnimationFrame
-? window.requestAnimationFrame
+: window.setImmediate
+? window.setImmediate
 : function (cb){ return setTimeout(cb, 0); }
 : setImmediate
 ? setImmediate

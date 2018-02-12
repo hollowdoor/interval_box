@@ -1,8 +1,8 @@
 const requestFrame = typeof window !== 'undefined'
 ? window.requestAnimationFrame
 ? window.requestAnimationFrame
-: window.requestAnimationFrame
-? window.requestAnimationFrame
+: window.setImmediate
+? window.setImmediate
 : (cb)=>setTimeout(cb, 0)
 : setImmediate
 ? setImmediate
